@@ -1,7 +1,10 @@
 # Binary Search / Busca Binária
 
-<p>O algoritmo de busca binária pode ser implementado em uma lista ordenada de `n` elementos e opera da seguinte forma:</p>
+Recebendo como entrada uma lista ordenada de `n` elementos, o algoritmo realizará uma busca de um determinado elemento e retornará o índice desse elemento, caso este esteja na lista.
 
-1. Verifica o elemento na posição `n // 2` da lista. Sendo `n` o tamanho da lista menos 1.
-2. Caso `x == y`, o programa se encerra e retorna o índice em que o elemento está. Caso `x < y`, o algoritmo busca na metade inferior da lista. Caso `x > y`, será verificado na metade superior da lista.
+Funcionamento: a busca binária sempre verifica o elemento no meio da lista. Caso o índice retornado (i) não contenha o elemento requisitado (x), o algoritmo efetuará uma comparação entre o elemento no índice e o elemento requisitado até que o mesmo seja encontrado, seguindo os seguintes parâmetros:
 
+1. Se `x < i`: o algoritmo irá efetuar uma nova busca, tendo como faixa de busca `0` (primeiro índice) e `i` (se tornando o último índice, assim criando uma nova lista formada pela menor metade da lista anterior).
+2. Se `x > i`: o algoritmo irá efetuar uma nova busca, tendo como faixa de busca `i` (se tornando o primeiro índice) e o `tamanho da lista - 1` (sendo o número total de índices da lista primária).
+
+Caso o algoritmo leia toda a lista e não encontre o elemento, ele retornará `none`.
