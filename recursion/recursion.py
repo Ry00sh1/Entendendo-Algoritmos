@@ -4,7 +4,6 @@ def factorial(number):
     if number == 1:
         return number
     else:
-        print(number)
         return number * factorial(number-1)
 
-factorial(10)
+print(factorial(10))
